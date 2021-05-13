@@ -1,0 +1,169 @@
+// cover some element-ui styles
+
+.el-breadcrumb__inner,
+.el-breadcrumb__inner a {
+  font-weight: 400 !important;
+}
+
+.el-upload {
+  input[type="file"] {
+    display: none !important;
+  }
+}
+
+.el-upload__input {
+  display: none;
+}
+
+.cell {
+  .el-tag {
+    margin-right: 0px;
+  }
+}
+
+.small-padding {
+  .cell {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+.fixed-width {
+  .el-button--mini {
+    padding: 7px 10px;
+  }
+}
+.status-col {
+  .cell {
+    padding: 0 10px;
+    text-align: center;
+
+    .el-tag {
+      margin-right: 0px;
+    }
+  }
+}
+
+// to fixed https://github.com/ElemeFE/element/issues/2461
+
+// refine element ui upload
+.upload-container {
+  .el-upload {
+    width: 100%;
+
+    .el-upload-dragger {
+      width: 100%;
+      height: 200px;
+    }
+  }
+}
+
+// dropdown
+.el-dropdown-menu {
+  a {
+    display: block
+  }
+}
+
+// fix date-picker ui bug in filter-item
+.el-range-editor.el-input__inner {
+  display: inline-flex !important;
+}
+
+// to fix el-date-picker css style
+.el-range-separator {
+  box-sizing: content-box;
+}
+
+//添加的弹窗动画
+.el-dialog__wrapper{
+  height: 100%;
+  overflow: hidden;
+}
+.right-dialog .el-dialog{
+  width: 40%;
+  position: fixed;
+  right: 0px;
+  height: 100vh;
+  top: 0;
+  margin-top: 0!important;
+  overflow: hidden;
+}
+.dialog-fade-enter-active .el-dialog.left{
+  animation:  dialog2-fade-in .3s linear;
+}
+.dialog-fade-leave-active .el-dialog.left{
+  animation: dialog2-fade-out .3s linear;
+}
+.center-dialog .el-dialog{
+  position: fixed;
+  top: 5%;
+  height: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 0!important;
+  overflow: hidden;
+}
+.el-dialog .el-dialog__body {
+  height: calc(100% - 45px);
+  overflow: auto;
+}
+
+@keyframes dialog2-fade-in {
+  0% {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+  25% {
+    transform: translate3d(60%, 0, 0);
+    opacity: .5;
+  }
+  50% {
+    transform: translate3d(15%, 0, 0);
+    opacity: .9;
+  }
+  75% {
+    transform: translate3d(5%, 0, 0);
+    opacity: .95;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes dialog2-fade-out {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  50% {
+    transform: translate3d(50%, 0, 0);
+    opacity: .9;
+  }
+  100% {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+}
+.el-dialog .dialog-btn{
+  position: fixed;
+  height: 56px;
+  bottom: 0px;
+  padding-right: 20px;
+  text-align: right;
+  width:calc(40% - 40px); 
+  background: #fff;
+  padding-top: 10px;
+}
+.el-dialog__footer {
+  margin-top: -60px;
+  background: #fff;
+  position: relative;
+  z-index: 99;
+  padding-right: 40px;
+}
+.el-dialog__header{
+  border-bottom: 1px solid #DCDFE6;
+}
+.el-table td>.cell{
+  font-size: 13px;
+}
